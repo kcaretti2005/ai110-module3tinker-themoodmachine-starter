@@ -92,3 +92,19 @@ TRUE_LABELS = [
 #
 # Remember to keep them aligned:
 #   len(SAMPLE_POSTS) == len(TRUE_LABELS)
+NEW_POSTS = [
+    ("Lowkey stressed but kind of proud of myself", "mixed"),
+    ("I absolutely love getting stuck in traffic", "negative"),   # sarcasm
+    ("no cap this pizza is fire 🔥", "positive"),                  # slang + emoji
+    ("I'm fine 🙂", "negative"),                                   # edge case, arguable
+    ("Just got home from work", "neutral"),
+    ("Class got moved to 3pm", "neutral"),
+    ("Exhausted but the project finally works 😂", "mixed"),
+    ("Today was not bad", "positive"),                             # negation, arguable
+]
+
+for post, label in NEW_POSTS:
+    SAMPLE_POSTS.append(post)
+    TRUE_LABELS.append(label)
+
+assert len(SAMPLE_POSTS) == len(TRUE_LABELS)
